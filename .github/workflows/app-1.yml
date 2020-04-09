@@ -5,13 +5,13 @@ on:
   pull_request:
     branches: [master]
 jobs:
-  - name: build app-1
-    uses: docker/build-push-action@v1.0.1
-    with:
-      repository: app-1
-      tag_with_sha: true
-      path: app-1
-      push: false
-    on:
-      push:
-        branches: [master]
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: build app-1
+        uses: docker/build-push-action@v1.0.1
+        with:
+          repository: app-1
+          tag_with_sha: true
+          path: app-1
+          push: false

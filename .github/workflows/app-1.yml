@@ -13,5 +13,5 @@ jobs:
         with:
           repository: app-1
           tag_with_sha: true
-          path: app-1
+          path: ./app-1
           push: false
